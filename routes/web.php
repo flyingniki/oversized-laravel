@@ -30,14 +30,15 @@ Route::get('/contacts', function () {
 });
 
 Route::get('/project-detail', function () {
-    return view('project');
+    return view('project-detail');
 });
 
 Route::get('/projects', function () {
     return view('projects');
 });
+
 Route::get('/service-detail', function () {
-    return view('service');
+    return view('service-detail');
 });
 
 Route::get('/services', function () {
