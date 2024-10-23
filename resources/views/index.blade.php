@@ -115,16 +115,7 @@
             <div class="car__item">
                 <div class="car__wrapper">
                     <div class="car__image">
-                        <picture>
-                            <source type="image/webp" media="(min-width: 1440px)"
-                                srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-                            <source type="image/webp" media="(min-width: 375px)"
-                                srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-                            <source media="(min-width: 375px)"
-                                srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
-                            <img class="car__img" src="./img/index/transport-desktop@1x.png"
-                                srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
-                        </picture>
+                        <img class="car__img" src="./img/index/transport-desktop@1x.png" alt="Faymonville">
                     </div>
                     <div class="car__info">
                         <p class="car__description">Марка FAYMONVILLE<br>Год выпуска 2010<br>Кол-во осей:
@@ -137,16 +128,7 @@
             <div class="car__item">
                 <div class="car__wrapper">
                     <div class="car__image">
-                        <picture>
-                            <source type="image/webp" media="(min-width: 1440px)"
-                                srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-                            <source type="image/webp" media="(min-width: 375px)"
-                                srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-                            <source media="(min-width: 375px)"
-                                srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
-                            <img class="car__img" src="./img/index/transport-desktop@1x.png"
-                                srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
-                        </picture>
+                        <img class="car__img" src="./img/index/transport-desktop@1x.png" alt="Faymonville">
                     </div>
                     <div class="car__info">
                         <p class="car__description">Марка FAYMONVILLE<br>Год выпуска 2010<br>Кол-во осей:
@@ -214,16 +196,7 @@
                 негабаритного груза автомобильным транспортом в Мурманск, Удачный, Магадан и т. д.</p>
         </div>
         <div class="oversized__image">
-            <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="./img/index/oversized-desktop@1x.webp, ./img/index/oversized-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 375px)"
-                    srcset="./img/index/oversized-desktop@1x.webp, ./img/index/oversized-desktop@2x.webp 2x">
-                <source media="(min-width: 375px)"
-                    srcset="./img/index/oversized-desktop@1x.png, ./img/index/oversized-desktop@2x.png 2x"><img
-                    class="oversized__img" src="./img/index/oversized-desktop@1x.png"
-                    srcset="./img/index/oversized-desktop@2x.png 2x" alt="Faymonville">
-            </picture>
+            <img class="oversized__img" src="./img/index/oversized-desktop@1x.png" alt="Faymonville">
         </div>
     </section>
     <section class="consultation">

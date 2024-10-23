@@ -67,8 +67,8 @@
         <header class="header page__header">
             <div class="header__wrapper"><a href="./" class="header__logo">
                     <picture>
-                        <source media="(min-width: 1440px)" srcset="./img/desktop-logo.svg"><img
-                            class="header__logo-img" src="./img/mobile-logo.svg" alt="Логотип" width="56"
+                        <source media="(min-width: 1440px)" srcset="./img/desktop-logo.svg">
+                        <img class="header__logo-img" src="./img/mobile-logo.svg" alt="Логотип" width="56"
                             height="28">
                     </picture>
                 </a>

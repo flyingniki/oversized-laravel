@@ -9,16 +9,7 @@
                 развития. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей
                 деятельности требуют от нас анализа модели развития. </p>
             <div class="detail__image">
-                <picture>
-                    <source type="image/webp" media="(min-width: 1440px)"
-                        srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 375px)"
-                        srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-                    <source media="(min-width: 375px)"
-                        srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
-                    <img class="detail__img" src="./img/index/transport-desktop@1x.png"
-                        srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
-                </picture>
+                <img class="detail__img" src="./img/index/transport-desktop@1x.png" alt="Faymonville">
             </div>
             <p class="detail__text">Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от
                 нас

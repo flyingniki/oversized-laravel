@@ -87,16 +87,7 @@
                 груза автомобильным транспортом в Мурманск, Удачный, Магадан и т. д.</p>
         </div>
         <div class="oversized__image">
-            <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="./img/index/oversized-desktop@1x.webp, ./img/index/oversized-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 375px)"
-                    srcset="./img/index/oversized-desktop@1x.webp, ./img/index/oversized-desktop@2x.webp 2x">
-                <source media="(min-width: 375px)"
-                    srcset="./img/index/oversized-desktop@1x.png, ./img/index/oversized-desktop@2x.png 2x">
-                <img class="oversized__img" src="./img/index/oversized-desktop@1x.png"
-                    srcset="./img/index/oversized-desktop@2x.png 2x" alt="Faymonville">
-            </picture>
+            <img class="oversized__img" src="./img/index/oversized-desktop@1x.png" alt="Faymonville">
         </div>
     </section>
     <section class="consultation">
