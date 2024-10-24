@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\CarparkController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,34 +17,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [MainController::class, 'index'])->name('main.index');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', [MainController::class, 'about'])->name('main.about');
 
-Route::get('/carpark', function () {
-    return view('carpark');
-});
+Route::get('/carpark', [CarparkController::class, 'cars'])->name('carpark');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-});
+Route::get('/contacts', [MainController::class, 'contacts'])->name('main.contacts');
 
-Route::get('/project-detail', function () {
-    return view('project-detail');
-});
+Route::get('/project-detail', [ProjectsController::class, 'showProject'])->name('project.show');
 
-Route::get('/projects', function () {
-    return view('projects');
-});
+Route::get('/projects', [ProjectsController::class, 'showAll'])->name('projects.all');
 
-Route::get('/service-detail', function () {
-    return view('service-detail');
-});
+Route::get('/service-detail', [ServicesController::class, 'showService'])->name('service.show');
 
-Route::get('/services', function () {
-    return view('services');
-});
+Route::get('/services', [ServicesController::class, 'showAll'])->name('services.all');

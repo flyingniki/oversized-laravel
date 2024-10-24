@@ -7,11 +7,11 @@
                 <div class="footer__menu">
                     <h2 class="footer__title">Меню</h2>
                     <ul class="footer__list clear-list">
-                        <li class="footer__item"><a href="./services" class="footer__link">Услуги</a></li>
-                        <li class="footer__item"><a href="./carpark" class="footer__link">Автопарк</a></li>
-                        <li class="footer__item"><a href="./about" class="footer__link">О нас</a></li>
-                        <li class="footer__item"><a href="./projects" class="footer__link">Проекты</a></li>
-                        <li class="footer__item"><a href="./contacts" class="footer__link">Контакты</a></li>
+                        <li class="footer__item"><a href="{{ route('services.all') }}" class="footer__link">Услуги</a></li>
+                        <li class="footer__item"><a href="{{ route('carpark') }}" class="footer__link">Автопарк</a></li>
+                        <li class="footer__item"><a href="{{ route('main.about') }}" class="footer__link">О нас</a></li>
+                        <li class="footer__item"><a href="{{ route('projects.all') }}" class="footer__link">Проекты</a></li>
+                        <li class="footer__item"><a href="{{ route('main.contacts') }}" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__menu">

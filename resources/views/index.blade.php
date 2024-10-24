@@ -22,7 +22,7 @@
                     <p class="services__carousel-title">Перевозка промышленных бульдозеров</p>
                 </div>
             </div>
-        </div><a href="./services.html" class="btn services__btn btn--blue services__btn--all">Все услуги</a>
+        </div><a href="{{ route('services.all') }}" class="btn services__btn btn--blue services__btn--all">Все услуги</a>
     </section>
     <section class="calculator">
         <h2 class="calculator__header">Узнать стоимость перевозок</h2>

@@ -65,7 +65,7 @@
     </svg>
     <div class="page__container">
         <header class="header page__header">
-            <div class="header__wrapper"><a href="./" class="header__logo">
+            <div class="header__wrapper"><a href="{{ route('main.index') }}" class="header__logo">
                     <picture>
                         <source media="(min-width: 1440px)" srcset="./img/desktop-logo.svg">
                         <img class="header__logo-img" src="./img/mobile-logo.svg" alt="Логотип" width="56"
@@ -74,11 +74,11 @@
                 </a>
                 <nav class="nav nav--closed">
                     <div class="nav__list">
-                        <div class="nav__item"><a href="./services" class="nav__link">Услуги</a></div>
-                        <div class="nav__item"><a href="./carpark" class="nav__link">Автопарк</a></div>
-                        <div class="nav__item"><a href="./about" class="nav__link">О нас</a></div>
-                        <div class="nav__item"><a href="./projects" class="nav__link">Проекты</a></div>
-                        <div class="nav__item"><a href="./contacts" class="nav__link">Контакты</a></div>
+                        <div class="nav__item"><a href="{{ route('services.all') }}" class="nav__link">Услуги</a></div>
+                        <div class="nav__item"><a href="{{ route('carpark') }}" class="nav__link">Автопарк</a></div>
+                        <div class="nav__item"><a href="{{ route('main.about') }}" class="nav__link">О нас</a></div>
+                        <div class="nav__item"><a href="{{ route('projects.all') }}" class="nav__link">Проекты</a></div>
+                        <div class="nav__item"><a href="{{ route('main.contacts') }}" class="nav__link">Контакты</a></div>
                     </div><button class="btn nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
                 </nav>
                 <div class="header__contacts"><a href="tel:+79778731886" class="header__phone">+7 (977) 873-18-86</a>

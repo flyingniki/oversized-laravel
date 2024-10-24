@@ -17,8 +17,8 @@
             </div>
             <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>Италия, Болонья - Россия, город Москва
             </p>
-            <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>спускаемый модуль космического аппарата</p>
-            <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span> низкорамный полуприцеп высотой 0,3 м
+            <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>Спускаемый модуль космического аппарата</p>
+            <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span>Низкорамный полуприцеп высотой 0,3 м
                 от уровня
                 земли</p>
             <p class="detail__text"><span class="detail__span">Особенности:&nbsp;</span>хрупкий груз, большая ширина груза,
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <a href="./projects.html" class="btn services__btn btn--blue services__btn--all">Все проекты</a>
+        <a href="{{ route('projects.all') }}" class="btn services__btn btn--blue services__btn--all">Все проекты</a>
     </section>
     <section class="consultation">
         <h2 class="consultation__title">Нужна консультация специалиста?</h2>
