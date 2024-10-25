@@ -9,18 +9,11 @@
         </div>
         <div class="services__carousel">
             <div class="services__carousel-list">
-                <div class="services__carousel-item">
-                    <p class="services__carousel-title">Перевозка экскаваторов</p>
-                </div>
-                <div class="services__carousel-item">
-                    <p class="services__carousel-title">Перевозка промышленных бульдозеров</p>
-                </div>
-                <div class="services__carousel-item">
-                    <p class="services__carousel-title">Перевозка экскаваторов</p>
-                </div>
-                <div class="services__carousel-item">
-                    <p class="services__carousel-title">Перевозка промышленных бульдозеров</p>
-                </div>
+                @foreach ($services as $service)
+                    <div class="services__carousel-item">
+                        <p class="services__carousel-title">{{ $service->title }}</p>
+                    </div>
+                @endforeach
             </div>
         </div><a href="{{ route('services.all') }}" class="btn services__btn btn--blue services__btn--all">Все услуги</a>
     </section>
@@ -112,32 +105,24 @@
     <section class="car">
         <h2 class="car__title">Наш автопарк</h2>
         <div class="car__slider">
-            <div class="car__item">
-                <div class="car__wrapper">
-                    <div class="car__image">
-                        <img class="car__img" src="./img/index/transport-desktop@1x.png" alt="Faymonville">
-                    </div>
-                    <div class="car__info">
-                        <p class="car__description">Марка FAYMONVILLE<br>Год выпуска 2010<br>Кол-во осей:
-                            8<br>Собственный вес 37 т<br>Полный вес 159 250 кг<br>Грузоподъёмность 112 750
-                            кг<br>Длина 22,35 м<br>Ширина 2,85 м<br>Высота 5,00 м</p><button type="button"
-                            class="btn car__btn btn--orange">Оставить заявку</button>
-                    </div>
-                </div>
-            </div>
-            <div class="car__item">
-                <div class="car__wrapper">
-                    <div class="car__image">
-                        <img class="car__img" src="./img/index/transport-desktop@1x.png" alt="Faymonville">
-                    </div>
-                    <div class="car__info">
-                        <p class="car__description">Марка FAYMONVILLE<br>Год выпуска 2010<br>Кол-во осей:
-                            8<br>Собственный вес 37 т<br>Полный вес 159 250 кг<br>Грузоподъёмность 112 750
-                            кг<br>Длина 22,35 м<br>Ширина 2,85 м<br>Высота 5,00 м</p><button type="button"
-                            class="btn car__btn btn--orange">Оставить заявку</button>
+            @foreach ($cars as $car)
+                <div class="car__item">
+                    <div class="car__wrapper">
+                        <div class="car__image">
+                            <img class="car__img" src="{{ $car->img }}" alt="{{ $car->brand }}">
+                        </div>
+                        <div class="car__info">
+                            <p class="car__description">Марка {{ $car->brand }}<br>Год выпуска
+                                {{ $car->year }}<br>Кол-во осей:
+                                {{ $car->axles }}<br>Собственный вес {{ $car->own_weight }} т<br>Полный вес
+                                {{ $car->full_weight }} кг<br>Грузоподъёмность {{ $car->load_capacity }}
+                                кг<br>Длина {{ $car->length }} м<br>Ширина {{ $car->width }} м<br>Высота
+                                {{ $car->height }} м</p><button type="button" class="btn car__btn btn--orange">Оставить
+                                заявку</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <section class="price">
@@ -196,7 +181,7 @@
                 негабаритного груза автомобильным транспортом в Мурманск, Удачный, Магадан и т. д.</p>
         </div>
         <div class="oversized__image">
-            <img class="oversized__img" src="./img/index/oversized-desktop@1x.png" alt="Faymonville">
+            <img class="oversized__img" src="/img/index/oversized-desktop@1x.png" alt="Faymonville">
         </div>
     </section>
     <section class="consultation">
@@ -298,22 +283,22 @@
     <section class="partners">
         <h2 class="partners__title">Наши партнеры</h2>
         <ul class="partners__list clear-list">
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/garpix.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/hp.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/idzor.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/garpix.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/garpix.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/hp.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/idzor.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
-            <li class="partners__item"><a href="#" class="partners__link"><img src="./img/index/garpix.png"
-                        class="partners__img" width="" height="" alt=""></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
+                        class="partners__img" width="" height="" alt="garpix"></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/hp.png"
+                        class="partners__img" width="" height="" alt="hp"></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/idzor.png"
+                        class="partners__img" width="" height="" alt="idzor"></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
+                        class="partners__img" width="" height="" alt="garpix"></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
+                        class="partners__img" width="" height="" alt="garpix"></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/hp.png"
+                        class="partners__img" width="" height="" alt="hp"></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/idzor.png"
+                        class="partners__img" width="" height="" alt="idzor"></a></li>
+            <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
+                        class="partners__img" width="" height="" alt="garpix"></a></li>
         </ul>
     </section>
     <section class="discuss">

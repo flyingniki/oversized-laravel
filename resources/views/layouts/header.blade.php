@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Негабаритные перевозки по России</title>
-    <link rel="preload" href="{{ asset('./fonts/Inter-Medium.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('./fonts/Inter-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('./fonts/Inter-SemiBold.woff2') }}" as="font" type="font/woff2"
+    <link rel="preload" href="{{ asset('/fonts/Inter-Medium.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('/fonts/Inter-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('/fonts/Inter-SemiBold.woff2') }}" as="font" type="font/woff2"
         crossorigin>
-    <link rel="icon" href="{{ asset('./favicon.ico') }}"><!-- 32×32 -->
-    <link rel="icon" href="{{ asset('./img/favicons/icon.svg') }}" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="{{ asset('./img/favicons/apple-icon-180x180.png') }}"><!-- 180×180 -->
-    <link rel="manifest" href="{{ asset('./manifest.webmanifest') }}">
-    <link rel="stylesheet" href="{{ asset('./css/style.min.css') }}">
+    <link rel="icon" href="{{ asset('/favicon.ico') }}"><!-- 32×32 -->
+    <link rel="icon" href="{{ asset('/img/favicons/icon.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ asset('/img/favicons/apple-icon-180x180.png') }}"><!-- 180×180 -->
+    <link rel="manifest" href="{{ asset('/manifest.webmanifest') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.min.css') }}">
 </head>
 
 <body class="page__body"><svg style="display: none;" xmlns="http://www.w3.org/2000/svg"
@@ -67,15 +67,15 @@
         <header class="header page__header">
             <div class="header__wrapper"><a href="{{ route('main.index') }}" class="header__logo">
                     <picture>
-                        <source media="(min-width: 1440px)" srcset="./img/desktop-logo.svg">
-                        <img class="header__logo-img" src="./img/mobile-logo.svg" alt="Логотип" width="56"
+                        <source media="(min-width: 1440px)" srcset="/img/desktop-logo.svg">
+                        <img class="header__logo-img" src="/img/mobile-logo.svg" alt="Логотип" width="56"
                             height="28">
                     </picture>
                 </a>
                 <nav class="nav nav--closed">
                     <div class="nav__list">
                         <div class="nav__item"><a href="{{ route('services.all') }}" class="nav__link">Услуги</a></div>
-                        <div class="nav__item"><a href="{{ route('carpark') }}" class="nav__link">Автопарк</a></div>
+                        <div class="nav__item"><a href="{{ route('cars') }}" class="nav__link">Автопарк</a></div>
                         <div class="nav__item"><a href="{{ route('main.about') }}" class="nav__link">О нас</a></div>
                         <div class="nav__item"><a href="{{ route('projects.all') }}" class="nav__link">Проекты</a></div>
                         <div class="nav__item"><a href="{{ route('main.contacts') }}" class="nav__link">Контакты</a></div>

@@ -5,7 +5,7 @@
         <section class="detail">
             <h1 class="detail__title">О нас</h1>
             <div class="detail__image">
-                <img class="detail__img" src="./img/index/transport-desktop@1x.png" alt="Faymonville">
+                <img class="detail__img" src="/img/index/transport-desktop@1x.png" alt="Faymonville">
             </div>
             <p class="detail__text">Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от
                 нас
@@ -74,69 +74,5 @@
             </div>
         </form>
     </section>
-    <section class="special">
-        <h2 class="special__title">Услуги по перевозке спецтехники по России</h2>
-        <div class="special__slider">
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
-                    <button class="btn service-item__btn btn--dark">Подробнее</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
-                    <button class="btn service-item__btn btn--dark">Подробнее</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
-                    <button class="btn service-item__btn btn--dark">Подробнее</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
-                    <button class="btn service-item__btn btn--dark">Подробнее</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
-                    <button class="btn service-item__btn btn--dark">Подробнее</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
-                    <button class="btn service-item__btn btn--dark">Подробнее</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('service-slider')
 @endsection

@@ -12,16 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('name');
-            $table->text('route');
-            $table->text('cargo');
-            $table->text('transport');
-            $table->text('features');
-            $table->text('description');
-            $table->string('preview_img');
-            $table->string('img');
+          $table->id();
+          $table->timestamps();
+          $table->string('name');
+          $table->text('route');
+          $table->text('cargo');
+          $table->text('transport');
+          $table->text('features');
+          $table->text('description');
+          $table->string('preview_img');
+          $table->string('img');
         });
     }
 

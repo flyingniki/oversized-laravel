@@ -2,42 +2,28 @@
 
 @section('content')
     <section class="all-services">
-        <h1 class="all-services__title">Проекты</h1>
+        <h1 class="all-services__title">Автопарк</h1>
         <div class="all-services__list">
-            @foreach ($projects as $project)
+            @foreach ($cars as $car)
                 <div class="service-item all-services__item">
                     <div class="service-item__image">
-                        <img src="{{ $project->preview_img }}" alt="{{ $project->name }}" class="service-item__img">
+                        <img src="{{ $car->preview_img }}" alt="{{ $car->brand }}" class="service-item__img">
                     </div>
                     <div class="service-item__description">
-                        <p class="service-item__text">{{ $project->name }}</p>
-                        <a href="projects/{{ $project->id }}" class="btn service-item__btn btn--dark">Все о проекте</a>
+                        <p class="service-item__text--name">Марка {{ $car->brand }}<br>
+                            Год выпуска {{ $car->year }}<br>
+                            Кол-во осей: {{ $car->axles }}<br>
+                            Собственный вес {{ $car->own_weight }} т<br>
+                            Полный вес {{ $car->full_weight }} кг<br>
+                            Грузоподъёмность {{ $car->load_capacity }} кг<br>
+                            Длина {{ $car->length }} м<br>
+                            Ширина {{ $car->width }} м<br>
+                            Высота {{ $car->height }} м</p>
+                        <button class="btn service-item__btn btn--dark">Заказать низкорамный трал:
+                            {{ $car->brand }}</button>
                     </div>
                 </div>
             @endforeach
-        </div>
-        <div class="pagination all-services__pagination">
-            <ul class="pagination__list clear-list">
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">
-                        <img class="pagination__img" src="/img/icons/arrow-left-control.svg" alt="">
-                    </a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">1</a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">2</a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link pagination__link--active">3</a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">
-                        <img class="pagination__img" src="/img/icons/arrow-right-control.svg" alt="">
-                    </a>
-                </li>
-            </ul>
         </div>
     </section>
     @include('service-slider')

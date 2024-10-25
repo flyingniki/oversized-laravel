@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
   public function showAll()
   {
-    return view('services');
+    $services = Service::all();
+    return view('services', compact('services'));
   }
 
-  public function showService()
+  public function showDetail(Service $service)
   {
-    return view('service-detail');
+    return view('service-detail', compact('service'));
   }
 }

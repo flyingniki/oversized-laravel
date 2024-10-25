@@ -3,99 +3,40 @@
 @section('content')
     <div class="container">
         <section class="detail">
-            <h1 class="detail__title">Перевозка газопоршневой установки по России</h1>
+            <h1 class="detail__title">{{ $project->name }}</h1>
             <div class="detail__list">
                 <div class="detail__image">
-                    <img class="detail__img" src="./img/projects/project.png" alt="Faymonville">
+                    <img class="detail__img" src="{{ $project->img }}" alt="Faymonville">
                 </div>
                 <div class="detail__image">
-                    <img class="detail__img" src="./img/projects/project.png" alt="Faymonville">
+                    <img class="detail__img" src="{{ $project->img }}" alt="Faymonville">
                 </div>
                 <div class="detail__image">
-                    <img class="detail__img" src="./img/projects/project.png" alt="Faymonville">
+                    <img class="detail__img" src="{{ $project->img }}" alt="Faymonville">
                 </div>
             </div>
-            <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>Италия, Болонья - Россия, город Москва
+            <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>{{ $project->route }}
             </p>
-            <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>Спускаемый модуль космического аппарата</p>
-            <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span>Низкорамный полуприцеп высотой 0,3 м
-                от уровня
-                земли</p>
-            <p class="detail__text"><span class="detail__span">Особенности:&nbsp;</span>хрупкий груз, большая ширина груза,
-                необходимость
-                в вооружённом сопровождении, необходимость поддержания температурного режима, сжатые сроки реализации
-                проекта, высокая
-                важность груза для космической отрасли</p>
-            <p class="detail__text"><span class="detail__span">Описание проекта:&nbsp;</span>Подготовка к выполнению проекта
-                заняла 4
-                недели. Учитывая высокую стоимость и важность груза, был разработан маршрут кратчайший маршрут движения,
-                привлечена
-                вооружённая охрана для сопровождения груза на всём пути следования, по всем транзитным странам и стране
-                назначения.
-                Учитывая необходимость в обеспечении поддержания определённой температуры внутри транспортного контейнера,
-                были
-                приобретены, настроены и подключены дизель-генераторные установки, работу которых постоянно контролировали
-                наши
-                сотрудники, следовавшие с грузом.</p>
+            <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>{{ $project->cargo }}</p>
+            <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span>{{ $project->transport }}</p>
+            <p class="detail__text"><span class="detail__span">Особенности:&nbsp;</span>{{ $project->features }}</p>
+            <p class="detail__text"><span class="detail__span">Описание проекта:&nbsp;</span>{{ $project->description }}</p>
         </section>
     </div>
     <section class="special">
         <h2 class="special__title">Другие проекты</h2>
         <div class="special__slider">
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/projects/project.png" alt="" class="service-item__img">
+            @foreach ($projects as $project)
+                <div class="service-item all-services__item">
+                    <div class="service-item__image">
+                        <img src="{{ $project->img }}" alt="{{ $project->name }}" class="service-item__img">
+                    </div>
+                    <div class="service-item__description">
+                        <p class="service-item__text">{{ $project->name }}</p>
+                        <a href="{{ $project->id }}" class="btn service-item__btn btn--dark">Все о проекте</a>
+                    </div>
                 </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <button class="btn service-item__btn btn--dark">Все о проекте</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/projects/project.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <button class="btn service-item__btn btn--dark">Все о проекте</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/projects/project.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <button class="btn service-item__btn btn--dark">Все о проекте</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/projects/project.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <button class="btn service-item__btn btn--dark">Все о проекте</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/projects/project.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <button class="btn service-item__btn btn--dark">Все о проекте</button>
-                </div>
-            </div>
-            <div class="service-item all-services__item">
-                <div class="service-item__image">
-                    <img src="./img/projects/project.png" alt="" class="service-item__img">
-                </div>
-                <div class="service-item__description">
-                    <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
-                    <button class="btn service-item__btn btn--dark">Все о проекте</button>
-                </div>
-            </div>
+            @endforeach
         </div>
         <a href="{{ route('projects.all') }}" class="btn services__btn btn--blue services__btn--all">Все проекты</a>
     </section>

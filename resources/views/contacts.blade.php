@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="contacts__col">
-                <img class="contacts__img" src="./img/contacts/map.png" alt="">
+                <img class="contacts__img" src="/img/contacts/map.png" alt="Карта">
             </div>
         </div>
     </section>
