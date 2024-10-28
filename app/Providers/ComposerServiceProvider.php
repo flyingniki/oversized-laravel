@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Car;
 use App\Models\Project;
 use App\Models\Service;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -33,6 +34,10 @@ class ComposerServiceProvider extends ServiceProvider
 
     View::composer('index', function ($view) {
       $view->with(['cars' => Car::all()]);
+    });
+
+    View::composer('projects', function ($view) {
+      $view->with(['arPagination' => DB::table('projects')->paginate(6)]);
     });
   }
 }

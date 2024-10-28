@@ -16,29 +16,7 @@
                 </div>
             @endforeach
         </div>
-        <div class="pagination all-services__pagination">
-            <ul class="pagination__list clear-list">
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">
-                        <img class="pagination__img" src="/img/icons/arrow-left-control.svg" alt="">
-                    </a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">1</a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">2</a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link pagination__link--active">3</a>
-                </li>
-                <li class="pagination__item">
-                    <a href="" class="pagination__link">
-                        <img class="pagination__img" src="/img/icons/arrow-right-control.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
+        {{ $arPagination->links() }}
     </section>
     @include('service-slider')
     <section class="consultation">
