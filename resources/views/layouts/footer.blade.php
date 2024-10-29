@@ -17,15 +17,15 @@
                 <div class="footer__menu">
                     <h2 class="footer__title">Услуги</h2>
                     <ul class="footer__list clear-list">
-                        <li class="footer__item"><a href="" class="footer__link">Перевозка негабаритных
+                        <li class="footer__item"><a href="#" class="footer__link">Перевозка негабаритных
                                 грузов</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Перевозка
+                        <li class="footer__item"><a href="#" class="footer__link">Перевозка
                                 экскаваторов</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Перевозка негабаритных
+                        <li class="footer__item"><a href="#" class="footer__link">Перевозка негабаритных
                                 грузов</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Перевозка сборных грузов
+                        <li class="footer__item"><a href="#" class="footer__link">Перевозка сборных грузов
                                 грузов</a></li>
-                        <li class="footer__item"><a href="" class="footer__link">Перевозка негабаритных
+                        <li class="footer__item"><a href="#" class="footer__link">Перевозка негабаритных
                                 грузов</a></li>
                     </ul>
                 </div>
