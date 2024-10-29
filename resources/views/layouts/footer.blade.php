@@ -20,9 +20,8 @@
                     <h2 class="footer__title">Услуги</h2>
                     <ul class="footer__list clear-list">
                         @foreach ($someServiceRefs as $ref)
-                            <li class="footer__item"><a href="services/{{ $ref->id }}"
-                                    class="footer__link">Перевозка негабаритных
-                                    грузов</a>
+                            <li class="footer__item">
+                                <a href="services/{{ $ref->id }}" class="footer__link">{{ $ref->title }}</a>
                             </li>
                         @endforeach
                     </ul>
