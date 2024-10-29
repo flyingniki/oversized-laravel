@@ -10,23 +10,21 @@
                         <li class="footer__item"><a href="{{ route('services.all') }}" class="footer__link">Услуги</a></li>
                         <li class="footer__item"><a href="{{ route('cars') }}" class="footer__link">Автопарк</a></li>
                         <li class="footer__item"><a href="{{ route('main.about') }}" class="footer__link">О нас</a></li>
-                        <li class="footer__item"><a href="{{ route('projects.all') }}" class="footer__link">Проекты</a></li>
-                        <li class="footer__item"><a href="{{ route('main.contacts') }}" class="footer__link">Контакты</a></li>
+                        <li class="footer__item"><a href="{{ route('projects.all') }}" class="footer__link">Проекты</a>
+                        </li>
+                        <li class="footer__item"><a href="{{ route('main.contacts') }}"
+                                class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer__menu">
                     <h2 class="footer__title">Услуги</h2>
                     <ul class="footer__list clear-list">
-                        <li class="footer__item"><a href="#" class="footer__link">Перевозка негабаритных
-                                грузов</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Перевозка
-                                экскаваторов</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Перевозка негабаритных
-                                грузов</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Перевозка сборных грузов
-                                грузов</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Перевозка негабаритных
-                                грузов</a></li>
+                        @foreach ($someServiceRefs as $ref)
+                            <li class="footer__item"><a href="services/{{ $ref->id }}"
+                                    class="footer__link">Перевозка негабаритных
+                                    грузов</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

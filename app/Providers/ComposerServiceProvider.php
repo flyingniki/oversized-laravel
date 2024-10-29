@@ -39,5 +39,9 @@ class ComposerServiceProvider extends ServiceProvider
     View::composer('projects', function ($view) {
       $view->with(['arPagination' => DB::table('projects')->paginate(6)]);
     });
+
+    View::composer('layouts.footer', function ($view) {
+      $view->with(['someServiceRefs' => Service::inRandomOrder()->limit(5)->get()]);
+    });
   }
 }
