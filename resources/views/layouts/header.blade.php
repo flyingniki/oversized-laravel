@@ -8,8 +8,7 @@
     <title>Негабаритные перевозки по России</title>
     <link rel="preload" href="{{ asset('/fonts/Inter-Medium.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ asset('/fonts/Inter-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ asset('/fonts/Inter-SemiBold.woff2') }}" as="font" type="font/woff2"
-        crossorigin>
+    <link rel="preload" href="{{ asset('/fonts/Inter-SemiBold.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="{{ asset('/favicon.ico') }}"><!-- 32×32 -->
     <link rel="icon" href="{{ asset('/img/favicons/icon.svg') }}" type="image/svg+xml">
     <link rel="apple-touch-icon" href="{{ asset('/img/favicons/apple-icon-180x180.png') }}"><!-- 180×180 -->
@@ -42,6 +41,13 @@
                     fill="#222222" />
                 <path d="M16.25 10.0833V8.25M16.25 8.25H14.4167M16.25 8.25L13.5 11" stroke="#222222" stroke-width="0.75"
                     stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="success--inline" viewBox="0 0 43 42">
+            <g fill="none">
+                <path
+                    d="M21.5 0C27.0695 0 32.411 2.21249 36.3492 6.15076C40.2875 10.089 42.5 15.4305 42.5 21C42.5 26.5695 40.2875 31.911 36.3492 35.8492C32.411 39.7875 27.0695 42 21.5 42C15.9305 42 10.589 39.7875 6.65076 35.8492C2.71249 31.911 0.5 26.5695 0.5 21C0.5 15.4305 2.71249 10.089 6.65076 6.15076C10.589 2.21249 15.9305 0 21.5 0ZM18.884 25.143L14.219 20.475C14.0518 20.3078 13.8532 20.1751 13.6347 20.0846C13.4162 19.9941 13.182 19.9475 12.9455 19.9475C12.709 19.9475 12.4748 19.9941 12.2563 20.0846C12.0378 20.1751 11.8392 20.3078 11.672 20.475C11.3342 20.8128 11.1445 21.2708 11.1445 21.7485C11.1445 22.2262 11.3342 22.6842 11.672 23.022L17.612 28.962C17.7788 29.1301 17.9772 29.2635 18.1957 29.3545C18.4143 29.4456 18.6487 29.4924 18.8855 29.4924C19.1223 29.4924 19.3567 29.4456 19.5753 29.3545C19.7938 29.2635 19.9922 29.1301 20.159 28.962L32.459 16.659C32.6285 16.4925 32.7633 16.294 32.8557 16.0751C32.9481 15.8562 32.9962 15.6211 32.9973 15.3835C32.9984 15.1459 32.9525 14.9105 32.8621 14.6907C32.7718 14.4709 32.6388 14.2712 32.4709 14.1031C32.303 13.935 32.1034 13.8018 31.8838 13.7112C31.6641 13.6206 31.4287 13.5744 31.1911 13.5752C30.9535 13.576 30.7184 13.6239 30.4994 13.716C30.2804 13.8081 30.0817 13.9427 29.915 14.112L18.884 25.143Z"
+                    fill="white" />
             </g>
         </symbol>
         <symbol id="tg--inline" viewBox="0 0 32 32">
@@ -77,8 +83,10 @@
                         <div class="nav__item"><a href="{{ route('services.all') }}" class="nav__link">Услуги</a></div>
                         <div class="nav__item"><a href="{{ route('cars') }}" class="nav__link">Автопарк</a></div>
                         <div class="nav__item"><a href="{{ route('main.about') }}" class="nav__link">О нас</a></div>
-                        <div class="nav__item"><a href="{{ route('projects.all') }}" class="nav__link">Проекты</a></div>
-                        <div class="nav__item"><a href="{{ route('main.contacts') }}" class="nav__link">Контакты</a></div>
+                        <div class="nav__item"><a href="{{ route('projects.all') }}" class="nav__link">Проекты</a>
+                        </div>
+                        <div class="nav__item"><a href="{{ route('main.contacts') }}" class="nav__link">Контакты</a>
+                        </div>
                     </div><button class="btn nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
                 </nav>
                 <div class="header__contacts"><a href="tel:+79778731886" class="header__phone">+7 (977) 873-18-86</a>
@@ -99,7 +107,7 @@
                                     </svg></a></li>
                         </ul>
                     </div>
-                </div><button type="button" class="btn header__btn btn--dark">Заказать звонок</button>
+                </div><button type="button" class="btn header__btn btn--dark call-back">Заказать звонок</button>
             </div>
         </header>
         <main class="page__main">

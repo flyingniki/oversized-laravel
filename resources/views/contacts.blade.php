@@ -61,8 +61,8 @@
             <div class="policy consultation__policy">
                 <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
                     value="agree">
-                <label class="policy__label" for="policy_consult">Соглашаюсь с <span class="policy__span">Правилами
-                        обработки персональных данных</span></label>
+                <label class="policy__label" for="policy_consult">Соглашаюсь с <a href="#" class="policy__link"><span
+                            class="policy__span">Правилами обработки персональных данных</span></a></label>
             </div>
         </form>
     </section>

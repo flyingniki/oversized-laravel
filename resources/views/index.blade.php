@@ -4,7 +4,7 @@
     <section class="services">
         <div class="services__banner">
             <h1 class="services__title">Негабаритные<br>перевозки<br>по России</h1><button type="button"
-                class="btn services__btn btn--orange services__btn--request">Оставить заявку</button>
+                class="btn services__btn btn--orange services__btn--request call-back">Оставить заявку</button>
             <p class="services__description">Перевозим нестандартные грузы</p>
         </div>
         <div class="services__carousel">
@@ -67,12 +67,13 @@
                     </ul>
                 </div>
                 <div class="calculator__send">
-                    <div class="policy calculator__policy"><input class="policy__input visually-hidden" type="checkbox"
-                            name="policy_calc" id="policy_calc" value="agree" checked="checked"> <label
-                            class="policy__label" for="policy_calc">Соглашаюсь с
-                            <span class="policy__span">Правилами обработки<br>персональных
-                                данных</span></label></div><button class="btn calculator__submit btn--orange"
-                        type="submit">Оставить заявку</button>
+                    <div class="policy calculator__policy">
+                        <input class="policy__input visually-hidden" type="checkbox" name="policy_calc"
+                            id="policy_calc" value="agree">
+                        <label class="policy__label" for="policy_calc">Соглашаюсь с <a href="#"
+                                class="policy__link"><span class="policy__span">Правилами обработки персональных
+                                    данных</span></a></label>
+                    </div><button class="btn calculator__submit btn--orange" type="submit">Оставить заявку</button>
                 </div>
             </div>
         </form>
@@ -117,7 +118,8 @@
                                 {{ $car->axles }}<br>Собственный вес {{ $car->own_weight }} т<br>Полный вес
                                 {{ $car->full_weight }} кг<br>Грузоподъёмность {{ $car->load_capacity }}
                                 кг<br>Длина {{ $car->length }} м<br>Ширина {{ $car->width }} м<br>Высота
-                                {{ $car->height }} м</p><button type="button" class="btn car__btn btn--orange">Оставить
+                                {{ $car->height }} м</p><button type="button"
+                                class="btn car__btn btn--orange call-back">Оставить
                                 заявку</button>
                         </div>
                     </div>
@@ -192,10 +194,13 @@
                     placeholder="Телефон*"> <button class="btn consultation__submit btn--orange" type="submit">Заказать
                     консультацию</button>
             </div>
-            <div class="policy consultation__policy"><input class="policy__input visually-hidden" type="checkbox"
-                    name="policy_consult" id="policy_consult" value="agree"> <label class="policy__label"
-                    for="policy_consult">Соглашаюсь с <span class="policy__span">Правилами обработки персональных
-                        данных</span></label></div>
+            <div class="policy consultation__policy">
+                <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
+                    value="agree">
+                <label class="policy__label" for="policy_consult">Соглашаюсь с <a href="#"
+                        class="policy__link"><span class="policy__span">Правилами обработки персональных
+                            данных</span></a></label>
+            </div>
         </form>
     </section>
     <section class="work">
@@ -311,10 +316,13 @@
                         class="discuss__input" type="text" name="name" id="name" placeholder="Имя"> <button
                         class="btn discuss__submit btn--orange" type="submit">Заказать консультацию</button>
                 </div>
-                <div class="policy discuss__policy"><input class="policy__input visually-hidden" type="checkbox"
-                        name="policy_discuss" id="policy_discuss" value="agree"> <label class="policy__label"
-                        for="policy_discuss">Соглашаюсь с <span class="policy__span">Правилами обработки персональных
-                            данных</span></label></div>
+                <div class="policy discuss__policy">
+                    <input class="policy__input visually-hidden" type="checkbox" name="policy_discuss"
+                        id="policy_discuss" value="agree">
+                    <label class="policy__label" for="policy_discuss">Соглашаюсь с <a href="#"
+                            class="policy__link"><span class="policy__span">Правилами обработки персональных
+                                данных</span></a></label>
+                </div>
             </form>
         </div>
         <div class="discuss__social">
