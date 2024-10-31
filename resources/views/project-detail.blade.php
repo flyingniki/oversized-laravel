@@ -5,15 +5,13 @@
         <section class="detail">
             <h1 class="detail__title">{{ $project->name }}</h1>
             <div class="detail__list">
-                <div class="detail__image">
-                    <img class="detail__img" src="{{ $project->img }}" alt="Faymonville">
-                </div>
-                <div class="detail__image">
-                    <img class="detail__img" src="{{ $project->img }}" alt="Faymonville">
-                </div>
-                <div class="detail__image">
-                    <img class="detail__img" src="{{ $project->img }}" alt="Faymonville">
-                </div>
+                @if (!empty($pictures))
+                    @foreach ($pictures as $picture)
+                        <div class="detail__image">
+                            <img class="detail__img" src="{{ $picture->img }}" alt="Faymonville">
+                        </div>
+                    @endforeach
+                @endif
             </div>
             <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>{{ $project->route }}
             </p>
@@ -43,7 +41,7 @@
     <section class="consultation">
         <h2 class="consultation__title">Нужна консультация специалиста?</h2>
         <form class="consultation__wrapper callback-form" action="/consultation" method="post">
-          @csrf
+            @csrf
             <div class="consultation__form">
                 <label class="visually-hidden" for="phone_consult"></label>
                 <input class="consultation__input" type="tel" name="client_phone" id="phone_consult"

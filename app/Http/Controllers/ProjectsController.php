@@ -10,11 +10,14 @@ class ProjectsController extends Controller
   public function showAll()
   {
     $projects = Project::all();
+
     return view('projects', compact('projects'));
   }
 
   public function showDetail(Project $project)
   {
-    return view('project-detail', compact('project'));
+    $pictures = $project->picture;
+
+    return view('project-detail', compact('project', 'pictures'));
   }
 }

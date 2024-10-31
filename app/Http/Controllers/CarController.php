@@ -10,6 +10,7 @@ class CarController extends Controller
   public function cars()
   {
     $cars = Car::all();
+
     return view('cars', compact('cars'));
   }
 }

@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Project extends Model
+class ProjectPicture extends Model
 {
   use HasFactory;
 
-  public function picture()
+  public function project()
   {
-    return $this->hasMany(ProjectPicture::class);
+    return $this->belongsTo(Project::class);
   }
 }
