@@ -4,18 +4,19 @@
     <section class="popup visually-hidden">
         <div class="popup__wrapper">
             <h2 class="popup__title">Заказать звонок</h2>
-            <form class="popup__form" action="#" method="post">
+            <form class="popup__form callback-form" action="/consultation" method="post">
+                @csrf
                 <div class="popup__fields">
                     <label class="visually-hidden" for="phone_popup"></label>
-                    <input class="popup__input" type="tel" name="phone_popup" id="phone_popup"
-                        placeholder="Телефон*">
+                    <input class="popup__input" type="tel" name="client_phone" id="phone_popup"
+                        placeholder="Телефон*" required>
                     <label class="visually-hidden" for="name"></label>
-                    <input class="popup__input" type="text" name="name" id="name" placeholder="Имя">
+                    <input class="popup__input" type="text" name="client_name" id="name" placeholder="Имя">
                     <button class="btn popup__submit btn--orange" type="submit">Оставить заявку</button>
                 </div>
                 <div class="policy popup__policy">
                     <input class="policy__input visually-hidden" type="checkbox" name="policy_popup" id="policy_popup"
-                        value="agree">
+                        checked>
                     <label class="policy__label" for="policy_popup">Соглашаюсь с <a href="#"
                             class="policy__link"><span class="policy__span">Правилами обработки персональных
                                 данных</span></a></label>
@@ -26,9 +27,11 @@
     </section>
     <section class="success visually-hidden">
         <div class="success__wrapper">
-            <svg class="success__svg">
-                <use xlink:href="#success--inline"></use>
-            </svg>
+            <div class="success__img">
+                <svg class="success__svg">
+                    <use xlink:href="#success--inline"></use>
+                </svg>
+            </div>
             <h2 class="success__title">Заявка принята</h2>
             <button class="btn success__close btn--orange" type="button">Ок</button>
             <button class="btn success__toggle"><span class="visually-hidden">Закрыть форму</span></button>

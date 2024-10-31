@@ -14,16 +14,17 @@
         </section>
         <section class="consultation consultation--detail">
             <h2 class="consultation__title">Нужна консультация специалиста?</h2>
-            <form class="consultation__wrapper" action="#" method="post">
+            <form class="consultation__wrapper callback-form" action="/consultation" method="post">
+              @csrf
                 <div class="consultation__form">
                     <label class="visually-hidden" for="phone_consult"></label>
-                    <input class="consultation__input" type="tel" name="phone_consult" id="phone_consult"
-                        placeholder="Телефон*">
+                    <input class="consultation__input" type="tel" name="client_phone" id="phone_consult"
+                        placeholder="Телефон*" required>
                     <button class="btn consultation__submit btn--orange" type="submit">Заказать консультацию</button>
                 </div>
                 <div class="policy consultation__policy">
                     <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
-                        value="agree">
+                        checked>
                     <label class="policy__label" for="policy_consult">Соглашаюсь с <a href="#"
                             class="policy__link"><span class="policy__span">Правилами обработки персональных
                                 данных</span></a></label>

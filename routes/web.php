@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ServicesController;
@@ -32,3 +34,7 @@ Route::get('/projects', [ProjectsController::class, 'showAll'])->name('projects.
 Route::get('/services/{service}', [ServicesController::class, 'showDetail'])->name('service.show');
 
 Route::get('/services', [ServicesController::class, 'showAll'])->name('services.all');
+
+Route::post('/consultation', [ConsultationController::class, 'sendRequest'])->name('consultation');
+
+Route::post('/calculator', [CalculatorController::class, 'sendRequest'])->name('calculator');
