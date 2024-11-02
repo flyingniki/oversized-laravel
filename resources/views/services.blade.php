@@ -7,7 +7,7 @@
             @foreach ($services as $service)
                 <div class="service-item all-services__item">
                     <div class="service-item__image">
-                        <img src="{{ $service->preview_img }}" alt="" class="service-item__img">
+                        <img src="{{ Storage::url($service->preview_img) }}" alt="{{ $service->title }}" class="service-item__img">
                     </div>
                     <div class="service-item__description">
                         <p class="service-item__text">{{ $service->title }}</p>

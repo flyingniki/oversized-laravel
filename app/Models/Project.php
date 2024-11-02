@@ -9,6 +9,16 @@ class Project extends Model
 {
   use HasFactory;
 
+  protected $fillable = [
+    'name',
+    'route',
+    'cargo',
+    'transport',
+    'features',
+    'description',
+    'preview_img'
+  ];
+
   public function picture()
   {
     return $this->hasMany(ProjectPicture::class);

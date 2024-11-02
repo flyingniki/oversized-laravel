@@ -80,10 +80,10 @@
                 </a>
                 <nav class="nav nav--closed">
                     <div class="nav__list">
-                        <div class="nav__item"><a href="{{ route('services.all') }}" class="nav__link">Услуги</a></div>
+                        <div class="nav__item"><a href="{{ route('services.show') }}" class="nav__link">Услуги</a></div>
                         <div class="nav__item"><a href="{{ route('cars') }}" class="nav__link">Автопарк</a></div>
                         <div class="nav__item"><a href="{{ route('main.about') }}" class="nav__link">О нас</a></div>
-                        <div class="nav__item"><a href="{{ route('projects.all') }}" class="nav__link">Проекты</a>
+                        <div class="nav__item"><a href="{{ route('projects.show') }}" class="nav__link">Проекты</a>
                         </div>
                         <div class="nav__item"><a href="{{ route('main.contacts') }}" class="nav__link">Контакты</a>
                         </div>

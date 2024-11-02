@@ -6,7 +6,7 @@
             <h1 class="detail__title">{{ $service->title }}</h1>
             <p class="detail__text detail__text--lead">{{ $service->lead }}</p>
             <div class="detail__image">
-                <img class="detail__img" src="{{ $service->img }}" alt="{{ $service->title }}">
+                <img class="detail__img" src="{{ Storage::url($service->img) }}" alt="{{ $service->title }}">
             </div>
             <p class="detail__text">{{ $service->description }}</p>
             <p class="detail__text">{{ $service->description }}</p>

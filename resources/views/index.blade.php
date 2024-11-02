@@ -15,7 +15,7 @@
                     </div>
                 @endforeach
             </div>
-        </div><a href="{{ route('services.all') }}" class="btn services__btn btn--blue services__btn--all">Все услуги</a>
+        </div><a href="{{ route('services.show') }}" class="btn services__btn btn--blue services__btn--all">Все услуги</a>
     </section>
     <section class="calculator">
         <h2 class="calculator__header">Узнать стоимость перевозок</h2>
@@ -111,7 +111,7 @@
                 <div class="car__item">
                     <div class="car__wrapper">
                         <div class="car__image">
-                            <img class="car__img" src="{{ $car->img }}" alt="{{ $car->brand }}">
+                            <img class="car__img" src="{{ Storage::url($car->img) }}" alt="{{ $car->brand }}">
                         </div>
                         <div class="car__info">
                             <p class="car__description">Марка {{ $car->brand }}<br>Год выпуска

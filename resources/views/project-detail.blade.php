@@ -8,7 +8,7 @@
                 @if (!empty($pictures))
                     @foreach ($pictures as $picture)
                         <div class="detail__image">
-                            <img class="detail__img" src="{{ $picture->img }}" alt="Faymonville">
+                            <img class="detail__img" src="{{ Storage::url($picture->img) }}" alt="Faymonville">
                         </div>
                     @endforeach
                 @endif
@@ -36,7 +36,7 @@
                 </div>
             @endforeach
         </div>
-        <a href="{{ route('projects.all') }}" class="btn services__btn btn--blue services__btn--all">Все проекты</a>
+        <a href="{{ route('projects.show') }}" class="btn services__btn btn--blue services__btn--all">Все проекты</a>
     </section>
     <section class="consultation">
         <h2 class="consultation__title">Нужна консультация специалиста?</h2>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CalculatorController extends Controller
 {
-  public function sendRequest(Request $request)
+  public function request(Request $request)
   {
     $width = $request->input('width');
     $height = $request->input('height');

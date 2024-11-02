@@ -7,7 +7,7 @@
             @foreach ($projects as $project)
                 <div class="service-item all-services__item">
                     <div class="service-item__image">
-                        <img src="{{ $project->preview_img }}" alt="{{ $project->name }}" class="service-item__img">
+                        <img src="{{ Storage::url($project->preview_img) }}" alt="{{ $project->name }}" class="service-item__img">
                     </div>
                     <div class="service-item__description">
                         <p class="service-item__text">{{ $project->name }}</p>

@@ -19,22 +19,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MainController::class, 'index'])->name('main.index');
+Route::controller(MainController::class)->group(function () {
+  Route::get('/', 'index')->name('main.index');
+  Route::get('/about', 'about')->name('main.about');
+  Route::get('/contacts', 'contacts')->name('main.contacts');
+});
 
-Route::get('/about', [MainController::class, 'about'])->name('main.about');
+Route::controller(CarController::class)->group(function () {
+  Route::get('/cars', 'cars')->name('cars');
+  Route::get('/cars/create', 'create')->name('cars.create');
+  Route::post('/cars/store', 'store')->name('cars.store');
+});
 
-Route::get('/cars', [CarController::class, 'cars'])->name('cars');
+Route::controller(ProjectsController::class)->group(function () {
+  Route::get('/projects', 'show')->name('projects.show');
+  Route::get('/projects/{project}', 'detail')
+    ->where('project', '[0-9]+')
+    ->name('project.detail');
+  Route::get('/projects/create', 'create')->name('projects.create');
+  Route::post('/projects/store', 'store')->name('projects.store');
+});
 
-Route::get('/contacts', [MainController::class, 'contacts'])->name('main.contacts');
+Route::controller(ServicesController::class)->group(function () {
+  Route::get('/services', 'show')->name('services.show');
+  Route::get('/services/{service}', 'detail')
+    ->where('service', '[0-9]+')
+    ->name('service.detail');
+  Route::get('/services/create', 'create')->name('services.create');
+  Route::post('/services/store', 'store')->name('services.store');
+});
 
-Route::get('/projects/{project}', [ProjectsController::class, 'showDetail'])->name('project.show');
+Route::post('/consultation', [ConsultationController::class, 'request'])->name('consultation');
 
-Route::get('/projects', [ProjectsController::class, 'showAll'])->name('projects.all');
-
-Route::get('/services/{service}', [ServicesController::class, 'showDetail'])->name('service.show');
-
-Route::get('/services', [ServicesController::class, 'showAll'])->name('services.all');
-
-Route::post('/consultation', [ConsultationController::class, 'sendRequest'])->name('consultation');
-
-Route::post('/calculator', [CalculatorController::class, 'sendRequest'])->name('calculator');
+Route::post('/calculator', [CalculatorController::class, 'request'])->name('calculator');

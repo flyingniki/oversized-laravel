@@ -21,7 +21,6 @@ return new class extends Migration
           $table->text('features');
           $table->text('description');
           $table->string('preview_img');
-          $table->string('img');
         });
     }
 
