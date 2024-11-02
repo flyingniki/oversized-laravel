@@ -3,19 +3,21 @@
 @section('content')
     <div class="container">
         <section class="detail">
-            <h1 class="detail__title">{{ $service->title }}</h1>
-            <p class="detail__text detail__text--lead">{{ $service->lead }}</p>
-            <div class="detail__image">
-                <img class="detail__img" src="{{ Storage::url($service->img) }}" alt="{{ $service->title }}">
+            <div class="detail__wrapper">
+                <h1 class="detail__title">{{ $service->title }}</h1>
+                <p class="detail__text detail__text--lead">{{ $service->lead }}</p>
+                <div class="detail__image">
+                    <img class="detail__img" src="{{ Storage::url($service->img) }}" alt="{{ $service->title }}">
+                </div>
+                <p class="detail__text">{{ $service->description }}</p>
+                <p class="detail__text">{{ $service->description }}</p>
+                <p class="detail__text">{{ $service->description }}</p>
             </div>
-            <p class="detail__text">{{ $service->description }}</p>
-            <p class="detail__text">{{ $service->description }}</p>
-            <p class="detail__text">{{ $service->description }}</p>
         </section>
         <section class="consultation consultation--detail">
             <h2 class="consultation__title">Нужна консультация специалиста?</h2>
             <form class="consultation__wrapper callback-form" action="/consultation" method="post">
-              @csrf
+                @csrf
                 <div class="consultation__form">
                     <label class="visually-hidden" for="phone_consult"></label>
                     <input class="consultation__input" type="tel" name="client_phone" id="phone_consult"

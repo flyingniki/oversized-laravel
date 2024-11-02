@@ -3,22 +3,25 @@
 @section('content')
     <div class="container">
         <section class="detail">
-            <h1 class="detail__title">{{ $project->name }}</h1>
-            <div class="detail__list">
-                @if (!empty($pictures))
-                    @foreach ($pictures as $picture)
-                        <div class="detail__image">
-                            <img class="detail__img" src="{{ Storage::url($picture->img) }}" alt="Faymonville">
-                        </div>
-                    @endforeach
-                @endif
+            <div class="detail__wrapper">
+                <h1 class="detail__title">{{ $project->name }}</h1>
+                <div class="detail__list">
+                    @if (!empty($pictures))
+                        @foreach ($pictures as $picture)
+                            <div class="detail__image detail__image--slider">
+                                <img class="detail__img" src="{{ Storage::url($picture->img) }}" alt="Faymonville">
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+                <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>{{ $project->route }}
+                </p>
+                <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>{{ $project->cargo }}</p>
+                <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span>{{ $project->transport }}</p>
+                <p class="detail__text"><span class="detail__span">Особенности:&nbsp;</span>{{ $project->features }}</p>
+                <p class="detail__text"><span class="detail__span">Описание проекта:&nbsp;</span>{{ $project->description }}
+                </p>
             </div>
-            <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>{{ $project->route }}
-            </p>
-            <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>{{ $project->cargo }}</p>
-            <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span>{{ $project->transport }}</p>
-            <p class="detail__text"><span class="detail__span">Особенности:&nbsp;</span>{{ $project->features }}</p>
-            <p class="detail__text"><span class="detail__span">Описание проекта:&nbsp;</span>{{ $project->description }}</p>
         </section>
     </div>
     <section class="special">
@@ -27,7 +30,7 @@
             @foreach ($projects as $project)
                 <div class="service-item all-services__item">
                     <div class="service-item__image">
-                        <img src="{{ $project->img }}" alt="{{ $project->name }}" class="service-item__img">
+                        <img src="{{ Storage::url($project->preview_img) }}" alt="{{ $project->name }}" class="service-item__img">
                     </div>
                     <div class="service-item__description">
                         <p class="service-item__text">{{ $project->name }}</p>
