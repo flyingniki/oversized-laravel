@@ -45,9 +45,9 @@ class ServicesController extends Controller
         'img' => $originalPath
       ]);
 
-      return 'Success';
+      return redirect()->route('services.create')->with('message', 'Запись успешно добавлена!');
     } else {
-      return 'Fail';
+      return redirect()->route('services.create')->with('error', 'Ошибка добавления!');
     }
   }
 }

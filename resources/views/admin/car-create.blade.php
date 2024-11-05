@@ -1,6 +1,20 @@
 @extends('layouts.layout')
 
 @section('content')
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form class="fieldset__list" action="{{ route('cars.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <label class="visually-hidden" for="brand"></label>
@@ -19,7 +33,8 @@
         <input class="fieldset__input" type="text" name="full_weight" id="full_weight" placeholder="Полный вес">
 
         <label class="visually-hidden" for="load_capacity"></label>
-        <input class="fieldset__input" type="text" name="load_capacity" id="load_capacity" placeholder="Грузоподъемность">
+        <input class="fieldset__input" type="text" name="load_capacity" id="load_capacity"
+            placeholder="Грузоподъемность">
 
         <label class="visually-hidden" for="length"></label>
         <input class="fieldset__input" type="text" name="length" id="length" placeholder="Длина">

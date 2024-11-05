@@ -64,9 +64,9 @@ class ProjectsController extends Controller
         ]);
       }
 
-      return 'Success';
+      return redirect()->route('projects.create')->with('message', 'Запись успешно добавлена!');
     } else {
-      return 'Fail';
+      return redirect()->route('projects.create')->with('error', 'Ошибка добавления!');
     }
   }
 }

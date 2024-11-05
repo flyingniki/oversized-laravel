@@ -1,6 +1,20 @@
 @extends('layouts.layout')
 
 @section('content')
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form class="fieldset__list" action="{{ route('projects.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <label class="visually-hidden" for="name"></label>

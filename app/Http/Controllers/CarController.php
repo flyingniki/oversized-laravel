@@ -46,9 +46,9 @@ class CarController extends Controller
         'img' => $originalPath
       ]);
 
-      return 'Success';
+      return redirect()->route('cars.create')->with('message', 'Запись успешно добавлена!');
     } else {
-      return 'Fail';
+      return redirect()->route('cars.create')->with('error', 'Ошибка добавления!');
     }
   }
 }
