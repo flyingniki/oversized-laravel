@@ -15,26 +15,30 @@
             </ul>
         </div>
     @endif
-    <form class="fieldset__list" action="{{ route('services.store') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <label class="visually-hidden" for="title"></label>
-        <input class="fieldset__input" type="text" name="title" id="title" placeholder="Название">
+    <section class="form">
+        <h1 class="form__title">Форма добавления услуги</h1>
+        <form class="form__body" action="{{ route('services.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="form__wrapper">
+                <label class="visually-hidden" for="title"></label>
+                <input class="form__input" type="text" name="title" id="title" placeholder="Название">
 
-        <label class="visually-hidden" for="subtitle"></label>
-        <input class="fieldset__input" type="text" name="subtitle" id="subtitle" placeholder="Подзаголовок">
+                <label class="visually-hidden" for="subtitle"></label>
+                <input class="form__input" type="text" name="subtitle" id="subtitle" placeholder="Подзаголовок">
 
-        <label class="visually-hidden" for="lead"></label>
-        <input class="fieldset__input" type="text" name="lead" id="lead" placeholder="Текст-лид">
+                <label class="visually-hidden" for="lead"></label>
+                <input class="form__input" type="text" name="lead" id="lead" placeholder="Текст-лид">
 
-        <label class="visually-hidden" for="description"></label>
-        <input class="fieldset__input" type="text" name="description" id="description" placeholder="Описание">
+                <label class="visually-hidden" for="description"></label>
+                <input class="form__input" type="text" name="description" id="description" placeholder="Описание">
 
-        <label class="visually-hidden" for="preview_img"></label>
-        <input class="fieldset__input" type="file" name="preview_img" id="preview_img" placeholder="Превью">
+                <label class="visually-hidden" for="preview_img"></label>
+                <input class="form__input" type="file" name="preview_img" id="preview_img" placeholder="Превью">
 
-        <label class="visually-hidden" for="img"></label>
-        <input class="fieldset__input" type="file" name="img" id="img" placeholder="Картинка">
-
-        <button class="btn calculator__submit btn--orange" type="submit">Создать</button>
-    </form>
+                <label class="visually-hidden" for="img"></label>
+                <input class="form__input" type="file" name="img" id="img" placeholder="Картинка">
+            </div>
+            <button class="btn form__submit btn--orange" type="submit">Создать</button>
+        </form>
+    </section>
 @endsection
