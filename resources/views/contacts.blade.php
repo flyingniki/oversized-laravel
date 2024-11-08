@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
+    {{ Breadcrumbs::render('contacts') }}
     <section class="contacts">
         <h1 class="contacts__title">Контакты</h1>
         <div class="contacts__wrapper">
@@ -52,7 +53,7 @@
     <section class="consultation">
         <h2 class="consultation__title">Нужна консультация специалиста?</h2>
         <form class="consultation__wrapper callback-form" action="#" method="post">
-          @csrf
+            @csrf
             <div class="consultation__form">
                 <label class="visually-hidden" for="phone_consult"></label>
                 <input class="consultation__input" type="tel" name="client_phone" id="phone_consult"

@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
+    {{ Breadcrumbs::render('about') }}
     <div class="container">
         <section class="detail">
             <div class="detail__wrapper">

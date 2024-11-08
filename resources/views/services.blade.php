@@ -1,13 +1,15 @@
 @extends('layouts.layout')
 
 @section('content')
+    {{ Breadcrumbs::render('services') }}
     <section class="all-services">
         <h1 class="all-services__title">Услуги по перевозке негабаритных грузов</h1>
         <div class="all-services__list">
             @foreach ($services as $service)
                 <div class="service-item all-services__item">
                     <div class="service-item__image">
-                        <img src="{{ Storage::url($service->preview_img) }}" alt="{{ $service->title }}" class="service-item__img">
+                        <img src="{{ Storage::url($service->preview_img) }}" alt="{{ $service->title }}"
+                            class="service-item__img">
                     </div>
                     <div class="service-item__description">
                         <p class="service-item__text">{{ $service->title }}</p>
@@ -45,7 +47,7 @@
     <section class="consultation">
         <h2 class="consultation__title">Нужна консультация специалиста?</h2>
         <form class="consultation__wrapper callback-form" action="/consultation" method="post">
-          @csrf
+            @csrf
             <div class="consultation__form">
                 <label class="visually-hidden" for="phone_consult"></label>
                 <input class="consultation__input" type="tel" name="client_phone" id="phone_consult"
