@@ -20,8 +20,8 @@
         <form class="form__body" action="{{ route('projects.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form__wrapper">
-                <label class="visually-hidden" for="name"></label>
-                <input class="form__input" type="text" name="name" id="name" placeholder="Имя">
+                <label class="visually-hidden" for="title"></label>
+                <input class="form__input" type="text" name="title" id="title" placeholder="Название">
 
                 <label class="visually-hidden" for="route"></label>
                 <input class="form__input" type="text" name="route" id="route" placeholder="Маршрут">

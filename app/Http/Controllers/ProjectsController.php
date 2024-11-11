@@ -48,7 +48,7 @@ class ProjectsController extends Controller
       $previewPath = $previewFile->storeAs($previewFolder,  $previewName, 'public');
 
       $project = Project::create([
-        'name' => $request->input('name'),
+        'title' => $request->input('title'),
         'route' => $request->input('route'),
         'cargo' => $request->input('cargo'),
         'transport' => $request->input('transport'),

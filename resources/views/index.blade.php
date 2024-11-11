@@ -291,21 +291,21 @@
         <h2 class="partners__title">Наши партнеры</h2>
         <ul class="partners__list clear-list">
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
-                        class="partners__img" width="" height="" alt="garpix"></a></li>
+                        class="partners__img" width="197" height="82" alt="garpix"></a></li>
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/hp.png"
-                        class="partners__img" width="" height="" alt="hp"></a></li>
+                        class="partners__img" width="197" height="82" alt="hp"></a></li>
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/idzor.png"
-                        class="partners__img" width="" height="" alt="idzor"></a></li>
+                        class="partners__img" width="197" height="82" alt="idzor"></a></li>
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
-                        class="partners__img" width="" height="" alt="garpix"></a></li>
+                        class="partners__img" width="197" height="82" alt="garpix"></a></li>
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
-                        class="partners__img" width="" height="" alt="garpix"></a></li>
+                        class="partners__img" width="197" height="82" alt="garpix"></a></li>
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/hp.png"
-                        class="partners__img" width="" height="" alt="hp"></a></li>
+                        class="partners__img" width="197" height="82" alt="hp"></a></li>
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/idzor.png"
-                        class="partners__img" width="" height="" alt="idzor"></a></li>
+                        class="partners__img" width="197" height="82" alt="idzor"></a></li>
             <li class="partners__item"><a href="#" class="partners__link"><img src="/img/index/garpix.png"
-                        class="partners__img" width="" height="" alt="garpix"></a></li>
+                        class="partners__img" width="197" height="82" alt="garpix"></a></li>
         </ul>
     </section>
     <section class="discuss">
@@ -315,8 +315,8 @@
               @csrf
                 <div class="discuss__fields"><label class="visually-hidden" for="phone_discuss"></label>
                     <input class="discuss__input" type="tel" name="phone_discuss" id="phone_discuss"
-                        placeholder="Телефон*" required> <label class="visually-hidden" for="name"></label> <input
-                        class="discuss__input" type="text" name="client_name" id="name" placeholder="Имя"> <button
+                        placeholder="Телефон*" required> <label class="visually-hidden" for="client_name"></label> <input
+                        class="discuss__input" type="text" name="client_name" id="client_name" placeholder="Имя"> <button
                         class="btn discuss__submit btn--orange" type="submit">Заказать консультацию</button>
                 </div>
                 <div class="policy discuss__policy">

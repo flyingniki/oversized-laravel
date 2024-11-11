@@ -7,11 +7,11 @@
             <form class="popup__form callback-form" action="/consultation" method="post">
                 @csrf
                 <div class="popup__fields">
-                    <label class="visually-hidden" for="phone_popup"></label>
-                    <input class="popup__input" type="tel" name="client_phone" id="phone_popup"
+                    <label class="visually-hidden" for="client_phone_popup"></label>
+                    <input class="popup__input" type="tel" name="client_phone_popup" id="client_phone_popup"
                         placeholder="Телефон*" required>
-                    <label class="visually-hidden" for="name"></label>
-                    <input class="popup__input" type="text" name="client_name" id="name" placeholder="Имя">
+                    <label class="visually-hidden" for="client_name_popup"></label>
+                    <input class="popup__input" type="text" name="client_name_popup" id="client_name_popup" placeholder="Имя">
                     <button class="btn popup__submit btn--orange" type="submit">Оставить заявку</button>
                 </div>
                 <div class="policy popup__policy">
