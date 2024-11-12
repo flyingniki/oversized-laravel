@@ -314,7 +314,7 @@
             <form class="discuss__form callback-form" action="/consultation" method="post">
               @csrf
                 <div class="discuss__fields"><label class="visually-hidden" for="phone_discuss"></label>
-                    <input class="discuss__input" type="tel" name="phone_discuss" id="phone_discuss"
+                    <input class="discuss__input" type="tel" name="client_phone" id="phone_discuss"
                         placeholder="Телефон*" required> <label class="visually-hidden" for="client_name"></label> <input
                         class="discuss__input" type="text" name="client_name" id="client_name" placeholder="Имя"> <button
                         class="btn discuss__submit btn--orange" type="submit">Заказать консультацию</button>

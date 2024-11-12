@@ -8,10 +8,10 @@
                 @csrf
                 <div class="popup__fields">
                     <label class="visually-hidden" for="client_phone_popup"></label>
-                    <input class="popup__input" type="tel" name="client_phone_popup" id="client_phone_popup"
+                    <input class="popup__input" type="tel" name="client_phone" id="client_phone_popup"
                         placeholder="Телефон*" required>
                     <label class="visually-hidden" for="client_name_popup"></label>
-                    <input class="popup__input" type="text" name="client_name_popup" id="client_name_popup" placeholder="Имя">
+                    <input class="popup__input" type="text" name="client_name" id="client_name_popup" placeholder="Имя">
                     <button class="btn popup__submit btn--orange" type="submit">Оставить заявку</button>
                 </div>
                 <div class="policy popup__policy">

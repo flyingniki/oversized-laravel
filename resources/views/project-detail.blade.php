@@ -5,7 +5,7 @@
     <div class="container">
         <section class="detail">
             <div class="detail__wrapper">
-                <h1 class="detail__title">{{ $project->name }}</h1>
+                <h1 class="detail__title">{{ $project->title }}</h1>
                 <div class="detail__list">
                     @if (!empty($pictures))
                         @foreach ($pictures as $picture)
@@ -35,7 +35,7 @@
                             class="service-item__img">
                     </div>
                     <div class="service-item__description">
-                        <p class="service-item__text">{{ $project->name }}</p>
+                        <p class="service-item__text">{{ $project->title }}</p>
                         <a href="{{ $project->id }}" class="btn service-item__btn btn--dark">Все о проекте</a>
                     </div>
                 </div>
