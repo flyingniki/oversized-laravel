@@ -6,6 +6,7 @@ use App\Models\Project;
 use App\Models\ProjectPicture;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 class ProjectsController extends Controller
 {
@@ -13,19 +14,22 @@ class ProjectsController extends Controller
   {
     $projects = Project::all();
 
-    return view('projects', compact('projects'));
+    return view('projects', compact('projects'), ['SEOData' => new SEOData(
+      title: 'Наши проекты',
+      description: 'Описание',
+    ),]);
   }
 
   public function detail(Project $project)
   {
     $pictures = $project->picture;
 
-    return view('project-detail', compact('project', 'pictures'));
+    return view('project-detail', compact('project', 'pictures'), ['SEOData' => $project->getDynamicSEOData()]);
   }
 
   public function create()
   {
-    return view('admin.project-create');
+    return view('admin.project-create', ['SEOData' => null]);
   }
 
   public function store(Request $request, ProjectPicture $picture)

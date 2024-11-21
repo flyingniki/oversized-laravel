@@ -20,7 +20,7 @@
     <section class="calculator">
         <h2 class="calculator__header">Узнать стоимость перевозок</h2>
         <form class="calculator__form" action="/calculator" method="post">
-          @csrf
+            @csrf
             <div class="range calculator__range">
                 <div class="range__wrapper">
                     <p class="range__value">Ширина в метрах</p><input class="range__input range__input--width"
@@ -69,8 +69,8 @@
                 </div>
                 <div class="calculator__send">
                     <div class="policy calculator__policy">
-                        <input class="policy__input visually-hidden" type="checkbox" name="policy_calc"
-                            id="policy_calc" checked>
+                        <input class="policy__input visually-hidden" type="checkbox" name="policy_calc" id="policy_calc"
+                            checked>
                         <label class="policy__label" for="policy_calc">Соглашаюсь с <a href="#"
                                 class="policy__link"><span class="policy__span">Правилами обработки персональных
                                     данных</span></a></label>
@@ -190,10 +190,11 @@
     <section class="consultation">
         <h2 class="consultation__title">Нужна консультация специалиста?</h2>
         <form class="consultation__wrapper callback-form" action="/consultation" method="post">
-          @csrf
+            @csrf
             <div class="consultation__form"><label class="visually-hidden" for="phone_consult"></label>
                 <input class="consultation__input" type="tel" name="client_phone" id="phone_consult"
-                    placeholder="Телефон*" required> <button class="btn consultation__submit btn--orange" type="submit">Заказать
+                    placeholder="Телефон*" required> <button class="btn consultation__submit btn--orange"
+                    type="submit">Заказать
                     консультацию</button>
             </div>
             <div class="policy consultation__policy">
@@ -312,12 +313,12 @@
         <div class="discuss__wrapper">
             <h2 class="discuss__title">Остались вопросы?<br>Давайте обсудим!</h2>
             <form class="discuss__form callback-form" action="/consultation" method="post">
-              @csrf
+                @csrf
                 <div class="discuss__fields"><label class="visually-hidden" for="phone_discuss"></label>
                     <input class="discuss__input" type="tel" name="client_phone" id="phone_discuss"
                         placeholder="Телефон*" required> <label class="visually-hidden" for="client_name"></label> <input
-                        class="discuss__input" type="text" name="client_name" id="client_name" placeholder="Имя"> <button
-                        class="btn discuss__submit btn--orange" type="submit">Заказать консультацию</button>
+                        class="discuss__input" type="text" name="client_name" id="client_name" placeholder="Имя">
+                    <button class="btn discuss__submit btn--orange" type="submit">Заказать консультацию</button>
                 </div>
                 <div class="policy discuss__policy">
                     <input class="policy__input visually-hidden" type="checkbox" name="policy_discuss"
