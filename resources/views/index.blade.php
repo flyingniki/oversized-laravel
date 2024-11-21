@@ -1,7 +1,5 @@
 @extends('layouts.layout')
 
-{!! seo($SEOData) !!}
-
 @section('content')
     <section class="services">
         <div class="services__banner">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use Illuminate\Http\Request;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 class CarController extends Controller
 {
@@ -11,12 +12,15 @@ class CarController extends Controller
   {
     $cars = Car::all();
 
-    return view('cars', compact('cars'));
+    return view('cars', compact('cars'), ['SEOData' => new SEOData(
+      title: 'Наш автопарк',
+      description: 'Описание',
+    ),]);
   }
 
   public function create()
   {
-    return view('admin.car-create');
+    return view('admin.car-create', ['SEOData' => null]);
   }
 
   public function store(Request $request)

@@ -11,8 +11,6 @@
                     <img class="detail__img" src="{{ Storage::url($service->img) }}" alt="{{ $service->title }}">
                 </div>
                 <p class="detail__text">{{ $service->description }}</p>
-                <p class="detail__text">{{ $service->description }}</p>
-                <p class="detail__text">{{ $service->description }}</p>
             </div>
         </section>
         <section class="consultation consultation--detail">

@@ -1,7 +1,5 @@
 @extends('layouts.layout')
 
-{!! seo($SEOData) !!}
-
 @section('content')
     {{ Breadcrumbs::render('about') }}
     <div class="container">

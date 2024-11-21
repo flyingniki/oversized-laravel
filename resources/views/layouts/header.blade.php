@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Негабаритные перевозки по России</title>
+    {!! seo($SEOData) !!}
     <link rel="preload" href="{{ asset('/fonts/Inter-Medium.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ asset('/fonts/Inter-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ asset('/fonts/Inter-SemiBold.woff2') }}" as="font" type="font/woff2" crossorigin>
