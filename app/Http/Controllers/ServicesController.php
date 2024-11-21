@@ -19,7 +19,6 @@ class ServicesController extends Controller
 
   public function detail(Service $service)
   {
-    dd($service->getDynamicSEOData());
     return view('service-detail', compact('service'), ['SEOData' => $service->getDynamicSEOData()]);
   }
 
