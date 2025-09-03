@@ -15,12 +15,12 @@
                         @endforeach
                     @endif
                 </div>
-                <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>{{ $project->route }}
+                <p class="detail__text"><span class="detail__span">Маршрут:&nbsp;</span>{!! $project->route !!}
                 </p>
-                <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>{{ $project->cargo }}</p>
-                <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span>{{ $project->transport }}</p>
-                <p class="detail__text"><span class="detail__span">Особенности:&nbsp;</span>{{ $project->features }}</p>
-                <p class="detail__text"><span class="detail__span">Описание проекта:&nbsp;</span>{{ $project->description }}
+                <p class="detail__text"><span class="detail__span">Груз:&nbsp;</span>{!! $project->cargo !!}</p>
+                <p class="detail__text"><span class="detail__span">Транспорт:&nbsp;</span>{!! $project->transport !!}</p>
+                <p class="detail__text"><span class="detail__span">Особенности:&nbsp;</span>{!! $project->features !!}</p>
+                <p class="detail__text"><span class="detail__span">Описание проекта:&nbsp;</span>{!! $project->description !!}
                 </p>
             </div>
         </section>
