@@ -33,10 +33,10 @@
                 <input class="form__input" type="text" name="description" id="description" placeholder="Описание">
 
                 <label class="visually-hidden" for="preview_img"></label>
-                <input class="form__input" type="file" name="preview_img" id="preview_img" placeholder="Превью">
+                <input class="form__input" type="file" name="preview_img" id="preview_img" placeholder="Превью" required>
 
                 <label class="visually-hidden" for="img"></label>
-                <input class="form__input" type="file" name="img" id="img" placeholder="Картинка">
+                <input class="form__input" type="file" name="img" id="img" placeholder="Картинка" required>
             </div>
             <button class="btn form__submit btn--orange" type="submit">Создать</button>
         </form>
